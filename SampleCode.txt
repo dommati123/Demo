@@ -16,3 +16,24 @@ public void readExcel() {
 		 String fileName=row..getCell(0).getStringCellValue().toString();
 		 String filePath=row..getCell(1).getStringCellValue().toString();
 	}
+
+
+
+
+//code to compare file name from list of webelements
+
+List<WebElement> elements=new ArrayList<WebElement>();
+
+elements=driver.findelements(By.xpath("     "));
+
+for(WebElement e:elements)
+{
+	if(e.gettext().contains("expectedFileName"))
+	{
+		-do something--
+	}
+	else
+	{
+		-get out of execution/add exception-
+	}
+}
