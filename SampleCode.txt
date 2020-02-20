@@ -1,0 +1,18 @@
+public void readExcel() {	
+		File file =    new File(ExcelFilePath);
+		FileInputStream inputStream = new FileInputStream(file);
+		 Workbook WB = null;
+		 String fileExtensionName = fileName.substring(fileName.indexOf("."));
+		 if(fileExtensionName.equals(".xlsx")){
+			    WB = new XSSFWorkbook(inputStream);
+			    }
+			    else if(fileExtensionName.equals(".xls")){
+			        WB = new HSSFWorkbook(inputStream);
+			    }
+		 
+		 Sheet WSheet = WB.getSheet("M1");
+		 
+		 Row row = WSheet.getRow(1);
+		 String fileName=row..getCell(0).getStringCellValue().toString();
+		 String filePath=row..getCell(1).getStringCellValue().toString();
+	}
